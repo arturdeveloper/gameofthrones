@@ -1,0 +1,3 @@
+
+http://api.tvmaze.com/singlesearch/shows?q=game-of-thrones&embed=episodes
+
