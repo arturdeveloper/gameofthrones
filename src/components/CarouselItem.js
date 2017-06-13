@@ -2,12 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-width: 800px;
-height: 400px;
+width: 200px;
+height: 350px;
 border: 2px solid black;
 border-radius: 10px;
-align-items: center
 `;
