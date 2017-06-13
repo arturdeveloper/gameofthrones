@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Carousel from './components/Carousel'
+import Header from './components/Header'
+
 
 const ROOT_URL = 'http://api.tvmaze.com/singlesearch/shows'
 
@@ -8,7 +11,8 @@ const div_flex_style = {
   display : 'flex',
   flex : 1 ,
   justifyContent : 'center',
-  textAlign : 'center'
+  textAlign : 'center',
+  flexDirection : 'column'
 }
 
 
@@ -29,7 +33,6 @@ class App extends Component {
       alert(e.message)
     }
 
-
   }
 
 
@@ -41,6 +44,14 @@ class App extends Component {
   render() {
     return (
       <div className="App" style = {div_flex_style}>
+        <Header>
+        GAME OF THRONES
+        </Header>
+
+        <Carousel>
+        carousel container
+        </Carousel>
+
 
       </div>
     );
