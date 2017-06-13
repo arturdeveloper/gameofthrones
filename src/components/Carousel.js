@@ -5,7 +5,7 @@ export default styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-width: 800px;
+width: auto;
 height: 400px;
 border: 2px solid black;
 border-radius: 10px;
