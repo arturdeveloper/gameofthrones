@@ -68,13 +68,9 @@ class App extends Component {
         >
 
 
-        <CarouselItem>
-        <p>{this.state.episodes[this.state.firstEpisodeToShowIndex].name}</p>
-        </CarouselItem>
-        <CarouselItem>
-        </CarouselItem>
-        <CarouselItem>
-        </CarouselItem>
+        <CarouselItem/>
+        <CarouselItem/>
+        <CarouselItem/>
 
 
         </Carousel>
