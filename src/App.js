@@ -9,16 +9,23 @@ const ROOT_URL = 'http://api.tvmaze.com/singlesearch/shows'
 
 const div_flex_style = {
   display : 'flex',
-  flex : 1 ,
-  justifyContent : 'center',
+  flex : 0.5,
+  justifyContent : 'space-around',
   textAlign : 'center',
-  flexDirection : 'column'
+  flexDirection : 'column',
+  padding : '20px' 
+
 }
 
 
 class App extends Component {
 
   state = { episodes : ''}
+
+  makeCarousel (){
+    return
+  }
+
 
   async getData () {
     let request ;
@@ -41,18 +48,18 @@ class App extends Component {
     this.getData()
   }
 
+
+
+
   render() {
     return (
-      <div className="App" style = {div_flex_style}>
+      <div style = {div_flex_style}>
         <Header>
         GAME OF THRONES
         </Header>
-
         <Carousel>
         carousel container
         </Carousel>
-
-
       </div>
     );
   }
