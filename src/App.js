@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Carousel from './components/Carousel'
 import Header from './components/Header'
@@ -45,6 +44,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
 
     return (
       <div style = {div_flex_style}>
@@ -52,18 +52,27 @@ class App extends Component {
         GAME OF THRONES
         </Header>
         <Carousel   nextClickHandler={()=>{
+
         const startIndex = this.state.firstEpisodeToShowIndex
-        const nextStartIndex = startIndex + 3
+        let nextStartIndex = startIndex + 3
+        if (nextStartIndex > this.state.episodes.length - 2){
+          nextStartIndex = this.state.episodes.length - 2
+        }
         this.setState({firstEpisodeToShowIndex : nextStartIndex})
         }}
 
         backClickHandler={()=>{
         const startIndex = this.state.firstEpisodeToShowIndex
-        const nextStartIndex = startIndex - 3
+        let nextStartIndex = startIndex - 3
+        if (nextStartIndex < 0 ){
+          nextStartIndex = 0
+        }
         this.setState({firstEpisodeToShowIndex : nextStartIndex})
         }}
+
+        data = {[this.state.episodes[this.state.firstEpisodeToShowIndex],
+        this.state.episodes[this.state.firstEpisodeToShowIndex+1],this.state.episodes[this.state.firstEpisodeToShowIndex+2]]}
         >
-      
         </Carousel>
       </div>
     );
