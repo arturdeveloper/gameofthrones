@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import Carousel from './components/Carousel'
 import Header from './components/Header'
-import CarouselItem from './components/CarouselItem'
 
 const ROOT_URL = 'http://api.tvmaze.com/singlesearch/shows'
 
@@ -46,14 +45,12 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div style = {div_flex_style}>
         <Header>
         GAME OF THRONES
         </Header>
-
-
-
         <Carousel   nextClickHandler={()=>{
         const startIndex = this.state.firstEpisodeToShowIndex
         const nextStartIndex = startIndex + 3
@@ -66,13 +63,7 @@ class App extends Component {
         this.setState({firstEpisodeToShowIndex : nextStartIndex})
         }}
         >
-
-
-        <CarouselItem/>
-        <CarouselItem/>
-        <CarouselItem/>
-
-
+      
         </Carousel>
       </div>
     );
