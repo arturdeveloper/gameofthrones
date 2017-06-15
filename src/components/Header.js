@@ -6,4 +6,5 @@ justify-content: center;
 width: auto;
 border: 2px solid palevioletred;
 border-radius: 3px;
+color: darkgoldenrod;
 `;

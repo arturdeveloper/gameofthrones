@@ -35,6 +35,10 @@ align-items: center
 }
 
 .CarouselItem {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
 width: 200px;
 height: 350px;
 border: 2px solid black;
